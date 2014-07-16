@@ -1,0 +1,21 @@
+
+.main_btn {
+	background-color: $main_color;
+	color: $light_text_color;
+	font-size: 18px;
+	padding: 15px 18px;
+	border-radius: 2px;
+	text-transform: lowercase;
+	outline: none;
+	border: none;
+	text-decoration: none;
+	-webkit-transition: $transition;
+	-moz-transition: $transition;
+	transition: $transition;
+	&:hover {
+		box-shadow: 0px -5px 0px 0px $main_color_light inset;
+	}
+	&:active {
+		background-color: $main_color_light;
+	}
+}

@@ -1,0 +1,16 @@
+* {
+	margin: 0px;
+}
+
+body {
+	background: $main_bg_color;
+	color: $dark_text_color;
+	text-align: center;
+	font-family: Montserrat, Inconsolata;
+	font-size: 20px;
+}
+
+h1 {
+	margin: 20px;
+	text-transform: uppercase;
+}

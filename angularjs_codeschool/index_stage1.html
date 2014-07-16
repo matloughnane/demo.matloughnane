@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html ng-app="store">
+<!-- ng-app RUNS A MODULE CALLED STORE WHEN HTML FILE LOADS -->
+	<head>
+		<link rel="stylesheet" type="text/css" href="assets/bootstrap-3.2.0-dist/css/bootstrap.min.css">		
+	</head>
+
+	<body ng-controller="StoreController as store">
+		<div ng-repeat="product in store.products" ng-hide="product.soldOut">
+			<h1>{{product.name}}</h1>
+			<h2>${{product.price}}</h2>
+			<p>{{product.description}}</p>
+			<button ng-show="product.canPurchase"> Add to Cart</button>
+		</div>
+
+		<!-- SCRIPTS -->
+		<script type="text/javascript" src="assets/angular.min.js"></script>
+		<!-- MAIN ANGULAR FILE - CONTAINS MODULES -->
+		<script type="text/javascript" src="assets/app.js"></script>
+		<!-- SIMPLE EXPRESSION -->
+		<!-- <p>{{"hello " + "you"}}</p> -->
+	</body>
+</html>

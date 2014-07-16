@@ -1,0 +1,52 @@
+<!DOCTYPE html5>
+<html ng-app="centurion">
+
+<head>
+	<title>centurion</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+	<link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+	<h1>Centurion</h1>
+
+	<div class="panel opposite_color">
+		<h2>Set Up Your Game:</h2>
+
+		<form name="gameForm" novalidate>
+			<!-- DURATION OF GAME -->
+			<select class="form_inputs">
+				<option value="" disabled selected>Select Duration of Game</option>
+				<option value="30">30 minutes</option>
+				<option value="60">60 minutes</option>
+				<option value="100">100 minutes</option>
+				<option value="0">Last Man Standing</option>
+			</select>
+			<!--DURATION BETWEEN DRINKS RADIO -->
+			<div class="radio_inputs">
+			Duration between drinks: 
+			<input type="radio" name="durationBetween" value="60">60
+			<input type="radio" name="durationBetween" value="100">100
+			</div>
+			<!-- DURATION BETWEEN DRINKS SELECT -->
+			<select class="form_inputs">
+				<option value="" disabled selected>Select Duration between Drinks</option>
+				<option value="60">60 seconds</option>
+				<option value="100">100 seconds</option>
+			</select><br>
+			<!-- EXTRA CHALLENGE -->
+			<div class="checkbox_input">
+			<input type="checkbox" name="challenges" value="enabled">Extra Challenges
+			</div>
+			<input type="submit" value="Submit" class="btn red-btn"/>
+		</form>
+
+	</div>
+
+	<!-- SCRIPTS -->
+	<script type="text/javascript" src="app/app.js"></script>
+	<script type="text/javascript" src="assets/angular.min.js"></script>
+</body>
+
+</html>

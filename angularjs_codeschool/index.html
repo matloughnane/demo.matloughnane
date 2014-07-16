@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html ng-app="store">
+<!-- ng-app RUNS A MODULE CALLED STORE WHEN HTML FILE LOADS -->
+	<head>
+		<link rel="stylesheet" type="text/css" href="assets/bootstrap-3.2.0-dist/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="assets/styles.css">		
+	</head>
+
+	<body ng-controller="StoreController as store">
+		<ul class="list-group">
+			<li class="list-group-item" ng-repeat="product in store.products | orderBy:'price'">
+				
+				<h3 ng-include="'assets/product-title.html'">
+				</h3>
+
+				<product-panels>
+
+				</product-panels>
+
+				<!-- <section ng-controller="PanelController as panel"> -->
+					<!-- CONTENTS OF PRODUCT-PANELS.HTML GOES HERE -->
+				<!-- </section> -->
+			</li>
+		</ul>
+
+		<!-- SCRIPTS -->
+		<script type="text/javascript" src="assets/angular.min.js"></script>
+		<!-- MAIN ANGULAR FILE - CONTAINS MODULES -->
+		<script type="text/javascript" src="assets/app.js"></script>
+		<!-- SECOND ANGULAR FILE - CONTAINS MODULES -->
+		<script type="text/javascript" src="assets/products.js"></script>
+		<!-- SIMPLE EXPRESSION -->
+		<!-- <p>{{"hello " + "you"}}</p> -->
+	</body>
+</html>

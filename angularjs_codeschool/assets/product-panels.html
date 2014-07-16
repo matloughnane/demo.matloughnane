@@ -1,0 +1,54 @@
+<section>
+<ul class="nav nav-pills">
+	<!-- PILL -->
+	<li ng-class="{active: panel.isSelected(1)}"> <a href ng-click="panel.selectTab(1)">Description</a></li>
+	<li ng-class="{active: panel.isSelected(2)}"> <a href ng-click="panel.selectTab(2)">Specifications</a></li>
+	<li ng-class="{active: panel.isSelected(3)}"> <a href ng-click="panel.selectTab(3)">Reviews</a></li>
+</ul>
+
+<!-- NG INCLUDE -->
+
+<!--  Description Tab's Content  -->
+<product-description ng-show="panel.isSelected(1)"> </product-description>
+
+<!-- END NG-INCLUDE -->
+
+<div class="panel" ng-show="panel.isSelected(2)">
+	<h4>Specifications</h4>
+	<blockquote>None Yet</blockquote>
+</div>
+<div class="panel" ng-show="panel.isSelected(3)">
+	<h4>Reviews</h4>
+	<blockquote ng-repeat="review in product.reviews">
+		<b>Stars: {{review.stars}}</b>
+		{{review.body}}
+		<cite>by: {{review.author}} {{review.createdOn | date}}</cite>
+	</blockquote>
+
+	<!-- LIVE FORM -->
+
+	<form name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewForm.$valid && reviewCtrl.addReview(product)" novalidate>
+		<!-- LIVE PREVIEW -->
+		<blockquote>
+			<b>Stars: {{reviewCtrl.review.stars}}</b>
+			{{reviewCtrl.review.body}}
+			<cite>by: {{reviewCtrl.review.author}}</cite>
+		</blockquote>
+		<!-- FORM START -->
+		<select class="form-control" ng-model="reviewCtrl.review.stars" required>
+			<option value="" disabled selected>Select stars</option>
+			<option value="1">1 star</option>
+			<option value="2">2 stars</option>
+			<option value="3">3 stars</option>
+			<option value="4">4 stars</option>
+			<option value="5">5 stars</option>
+		</select><br>
+		<textarea class="form-control" ng-model="reviewCtrl.review.body" placeholder="Your review..." required></textarea><br>
+		<input type="email" class="form-control" ng-model="reviewCtrl.review.author" placeholder="Email" required/><br>
+		<div> reviewForm is {{reviewForm.$valid}}</div>
+		<input type="submit" value="Submit" class="pull-right btn btn-danger" /><br>
+	</form>
+
+	<!-- END FORM -->
+</div>
+</section>

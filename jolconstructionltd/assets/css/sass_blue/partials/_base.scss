@@ -1,0 +1,139 @@
+
+@-webkit-viewport { width: device-width; }
+@-moz-viewport { width: device-width; }
+@-ms-viewport { width: device-width; }
+@-o-viewport { width: device-width; }
+@viewport { width: device-width; }
+
+body {
+	background-color: $bkg;
+	color: $bkg_light;
+	font-family: Rambla, Helvetica;
+	margin: 0px;
+}
+
+a {
+	text-decoration: none;
+	color: $bkg_light;
+}
+
+h1 {
+	font-size: 2.5em;
+}
+
+h4 {
+	margin: 0px;
+}
+
+.card {
+	background-color: $bkg_light;
+	color: $bkg;
+	border-radius: 2px;
+	margin: 10px 0px;
+	box-shadow: 0px 5px 5px $bkg;
+}
+
+
+// ===================== HEADER ===============================
+
+.logo {
+	max-width: 70%;
+}
+
+.logo_cover {
+	background-image: url("../img/draft_logo_redO.png");
+	background-size: cover;
+	width: 300px;
+	height: 200px;
+}
+
+
+// CONTACT DETAILS
+
+.contact {
+	margin-top: 50px;
+	font-size: 18px;
+}
+
+.contact_link {
+	padding: 10px;
+	margin: 0px;
+	&:hover {
+		box-shadow: 0px -4px 0px 0px $main_color inset;
+	}
+	&:active {
+		// background-color: $main_color_dark;
+		box-shadow: 0px -4px 0px 0px $sec_color_light inset;
+	}
+}
+
+
+
+// ===================== END HEADER ===============================
+
+
+
+// ===================== FOOTER ===============================
+
+
+.footer {
+	background-color: $main_color;
+	color: $bkg_light;
+	padding: 10px;
+	bottom: 0;
+	font-size: 12px;
+	text-align: right;
+}
+
+// ===================== END FOOTER ===============================
+
+.circle_div {
+	margin: 0 auto;
+	background-color: $bkg_light;
+	border: $sec_color solid 10px;
+	border-radius: 50%;
+	height: 150px;
+	width: 150px;
+}
+
+img {
+	width: 100%;
+}
+
+
+// ===================== DEMO CSS ONLY ===============================
+
+.style_switcher {
+	width: 100%;
+	top: 0;
+	background-color: #00B16A;
+	ul {
+		padding: 5px;
+		font-size: 14px;
+		margin: 0;
+		li {
+			padding: 10px;
+			display: inline-block;
+			a {
+				color: $bkg_light;
+			}
+		}
+	}
+}
+
+
+// MOBILE SCREENS
+
+@media screen and (max-width: 640px) {
+	
+	h1 {
+		margin: 0em;
+		margin-top: 1.5em;
+	}
+
+	.contact {
+		margin-top: 5px;
+		font-size: 18px;
+	}
+
+}

@@ -1,0 +1,35 @@
+
+.btn {
+	font-size: 18px;
+	padding: 15px 18px;
+	border-radius: 2px;
+	text-transform: lowercase;
+	outline: none;
+	border: none;
+	text-decoration: none;
+	-webkit-transition: $transition;
+	-moz-transition: $transition;
+	transition: $transition;
+	&:hover {
+
+	}
+	&:active {
+
+	}
+}
+
+.red-btn {
+	background-color: $dull_red;
+	color: $light_grey;
+	border: 2px solid $dull_red;
+	&:hover {
+		background-color: $light_grey;
+		color: $dull_red;
+		border: 2px solid $dull_red;
+	}
+	&:active {
+		background-color: $vibrant_red;
+		color: $light_grey;
+	}
+}
+
