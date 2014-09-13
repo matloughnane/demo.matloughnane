@@ -1,0 +1,84 @@
+<html>
+<head>
+  <script src="https://cdn.firebase.com/js/client/1.0.15/firebase.js"></script>
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js'></script>
+  <link rel="stylesheet" type="text/css" href="assets/css/gridism.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/firebase_example_ml.css">
+</head>
+<body class="wrap">
+
+<!-- CHAT MARKUP -->
+<div class="grid">
+  <div class="unit one-third">
+  
+    <div class="sidebar">
+      <div class="logo">
+        <!-- <div class="logo_placeholder"></div> -->
+        <img src="assets/img/cbg-01.png">
+      </div>
+      <div class="user_login align-center">
+          <input type='text' id='nameInput' placeholder='Enter a username...'>
+      </div>
+      <div class="message_input align-center">
+          <textarea type='text' id='messageInput' rows="3" cols="70" placeholder='Type a message...'></textarea>
+      </div>
+    </div>
+  </div>
+
+  <div class="unit two-thirds">
+    <div class="message_list">
+<!--       <div class="title_bar align-center"><h3>Updates</h3></div> -->
+        <ul id='example-messages' class="example-chat-messages"></ul>
+    </div>
+  </div>
+</div>
+
+<!-- CHAT JAVACRIPT -->
+<script>
+  // CREATE A REFERENCE TO FIREBASE
+  var url = "https://amber-fire-55.firebaseio.com/";
+  var firebaseRef = new Firebase(url);
+
+  // A MESSAGES REFERENCE UNDER MAIN DB
+  var chatsRef = firebaseRef.child("chats");
+
+  // REGISTER DOM ELEMENTS
+  var messageField = $('#messageInput');
+  var nameField = $('#nameInput');
+  var messageList = $('#example-messages');
+
+  // LISTEN FOR KEYPRESS EVENT
+  messageField.keypress(function (e) {
+    if (e.keyCode == 13) {
+      //FIELD VALUES
+      var username = nameField.val();
+      var message = messageField.val();
+
+      //SAVE DATA TO FIREBASE AND EMPTY FIELD
+      chatsRef.push({name:username, text:message});
+      messageField.val('');
+    }
+  });
+
+  // Add a callback that is triggered for each chat message.
+  chatsRef.limit(20).on('child_added', function (snapshot) {
+    //GET DATA
+    var data = snapshot.val();
+    var username = data.name || "anonymous";
+    var message = data.text;
+
+    //CREATE ELEMENTS MESSAGE & SANITIZE TEXT
+    var messageElement = $("<li>");
+    var nameElement = $("<strong class='example-chat-username'></strong> <br>")
+    nameElement.text(username);
+    messageElement.text(message).prepend(nameElement);
+
+    //ADD MESSAGE
+    messageList.prepend(messageElement)
+
+    //SCROLL TO BOTTOM OF MESSAGE LIST
+    messageList[0].scrollBottom = messageList[0].scrollHeight;
+  });
+</script>
+</body>
+</html>

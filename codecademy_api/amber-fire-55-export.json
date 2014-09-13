@@ -1,0 +1,19 @@
+{
+  "messages" : {
+    "-JTwj3CINq_awv1pq0HG" : {
+      "Date" : "Sat Aug 09 2014 22:46:00 GMT+0100 (BST)",
+      "Message" : "Testing Read Message 1",
+      "Name" : "TestingRead1"
+    },
+    "-JTwjHsyugEMDyLQ3Bz6" : {
+      "Date" : "Sat Aug 09 2014 22:47:00 GMT+0100 (BST)",
+      "Message" : "Testing Read Message 2",
+      "Name" : "TestingRead2"
+    },
+    "-JTwjJPDHpHf1BUnFX6G" : {
+      "Date" : "Sat Aug 09 2014 22:47:06 GMT+0100 (BST)",
+      "Message" : "Testing Read Message 3",
+      "Name" : "TestingRead3"
+    }
+  }
+}

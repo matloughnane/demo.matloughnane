@@ -1,0 +1,61 @@
+<!DOCTYPE html5>
+<html>
+<head>
+	<title>Simple Firebase Form</title>
+	
+	<!-- NEEDED JQUERY TO USE DOCUMENT.READY -->
+	<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+	<!-- FIREBASE -->
+	<script src="https://cdn.firebase.com/v0/firebase.js"></script>
+		<!-- NEEDED JQUERY TO USE DOCUMENT.READY -->
+	<script src="assets/js/firebase_form.js"></script>
+
+</head>
+
+<body>
+
+<h1>Firebase form</h1>
+
+<p>This is a simple form to submit and read data to firebase.</p>
+
+	<form>
+	    <div>
+	        <input id="name" type="text" placeholder="Name">
+	    </div>
+	    <div>
+	        <textarea id="message" type="text" placeholder="Message"></textarea>
+	    </div>
+	    <button id="MessageButton" type="submit" class="submit">Submit</button>
+	</form>
+
+<hr>
+
+<h2>Writing the messages</h2>
+
+<div class="container">
+	<div id="documentRead"></div>
+</div>
+
+<br>
+
+<div class="container">
+	<div class="nameDiv"></div>
+	<div class="messageDiv"></div>
+</div>
+
+<br>
+
+<div class="container">
+	<div id="totalDocumentRead"></div>
+</div>
+
+<br>
+
+<div>
+	<div class="nameLoop"></div>
+	<div class="messageLoop"></div>
+</div>
+
+</body>
+
+</html>
