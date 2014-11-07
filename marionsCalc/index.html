@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/gridism.css">
+	<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+
+	<script type="text/javascript" src="assets/js/calculate.js"></script>
+
+	<title>Mario's Calculator</title>
+
+	</head>
+
+	<body class="wrap">
+
+    <div class="grid">
+      <div class="unit whole align-center">
+        <h1>Marion's Calculator</h1>
+      </div>
+    </div>
+
+    <div class="grid">
+        
+		<form id="calc" oninput="updateOutput()">
+			<!--input and output elements-->
+		<div class="grid buffer">
+			<div class="unit half align-center input_num">
+				<input name="x" type="number" value="0" class="unit whole"/>
+			</div>
+
+			<div class="unit half align-right custom-select">
+				<select name="op" onchange="updateOutput()">
+					<option value="0">Calculate VAT @ 23%</option>
+					<option value="1">Add VAT @ 23%</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="grid">
+			<div class="unit one-fifth">
+				<div class="equals align-center"> = </div>
+			</div>
+
+			<div class="unit four-fifths">
+				<output name="z" for="x">0</output>
+			</div>
+		</div>
+
+		</form>
+
+      </div>
+
+	</body>
+</html>

@@ -1,0 +1,79 @@
+* { 
+	font-family: 'Droid Sans', sans-serif;
+}
+
+body {
+	font-family: 'Droid Sans', sans-serif;
+}
+
+h1 {
+	font-size:35px;
+}
+
+.buffer {
+	padding: 0 40px;
+}
+
+input {
+  	font-size:24px;
+  	padding: 10px;
+	display: block;
+	border: none;
+	text-align:right;
+	border-radius:2px;
+	float: right;
+}
+
+input:focus {
+	outline:none;
+}
+
+.input_num {
+
+	border-bottom: 5px solid #c0392b;
+}
+
+select {
+   	background: transparent;
+   	font-size: 24px;
+   	border: 1;
+   	border-radius: 2;
+}
+
+
+select:focus {
+	outline:none;
+}
+
+/*REMOVE THE SPINNERS*/
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 5; 
+}
+
+/* select and equals elements */
+
+
+.equals{
+	display:block;
+	border: 1px solid #c0392b;
+	border-radius:5px;
+	margin:3px;
+	padding:20px;
+	text-align:center;
+   	font-size: 24px;
+}
+
+/* output element */
+output {
+	display:block;
+	border:1px solid #c0392b;
+	border-radius:5px;
+	margin:3px;
+	padding:20px;
+	text-align:center;
+	font-size: 24px;
+	background: #c0392b;
+	color:#ffffff;
+}
