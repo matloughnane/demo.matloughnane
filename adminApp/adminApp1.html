@@ -1,0 +1,53 @@
+<!DOCTYPE html5>
+<html>
+<head>
+	<title>Admin App Test</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/firebase_tree.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/gridism.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+
+	<script src="https://cdn.firebase.com/js/client/1.0.15/firebase.js"></script>
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="assets/js/firebase_tree.js"></script>
+
+</head>
+<body class="wrap">
+
+<a href="index.html"><div class="btn default">back to index</div></a>
+
+<div class="grid">
+
+	<h1>Admin Application</i></h1>
+	
+	<div class="unit whole">
+		<ul id="records"></ul>
+
+		<form><input type="text" placeholder="Add a main time"><button><i class="fa fa-plus-square"></i></button></form>
+	
+		<li id="recordTemplate"> 
+			<!-- DELETE BUTTONS -->
+		    <span></span> <a href="#"><i class="fa fa-times red"></i></a>
+		    <!-- SUB LISTS -->
+		    <ul></ul>
+		    <!-- SUB INPUT FIELDS -->
+		    <form class="sub_form"><input class="sub_input" type="text" placeholder="Add a another ferry time"><button><i class="fa fa-plus-square green"></i></button></form>
+		</li>
+
+	</div>
+</div>
+   
+ 
+
+    
+<!-- after parsing the records, they look like this 
+     (the hash is stored in data-id):
+<li data-id="-iZjYl...."> 
+    <span>Title here</span> <a href="#">X</a>
+    <ul>... children here... </ul>
+    <form><input type="text"><button>add</button></form>
+</li>
+-->
+
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+form {
+	display: block;
+}
+
+ul {
+	list-style: none;
+	padding-top: 5px;
+}
+
+li {
+	padding-left: 5px;
+	border: 1px solid #bdc3c7;
+}
+
+#recordTemplate { display: none; }
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+
+}
+
+
+
+/*ML ADDITIONS*/
+
+body {
+	font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica;
+	color: #333;
+	font-size: 16px;
+	background-color: #ECF0F1;
+}
+
+input {
+	padding: 5px;
+}
+
+.sub_input {
+	margin-left: 10px;
+}
+
+.sub_form {
+	border: 1px dashed #bdc3c7;
+}
+
+button {
+	padding: 3px;
+}
+
+i {
+	font-size: 20px;
+}
+
+.red {
+	color: red;
+}
+
+.green {
+	color: green;
+}
+
+.btn {
+	border: none;
+	background: none;
+	padding: 10px 5px;
+	display: inline-block;
+	margin: 5px 5px;
+	text-transform: lowercase;
+	text-decoration: none;
+	outline: none;
+	position: relative;
+	border-radius: 2px;
+	-webkit-transition: all 0.1s;
+	-moz-transition: all 0.1s;
+	transition: all 0.1s;
+	background-color: #1e8bc3;
+}
+
+/* line 16, sass/partials/_buttons.scss */
+.btn i {
+  margin-right: 20px;
+}
+
+/* line 21, sass/partials/_buttons.scss */
+.default {
+  color: #eeeeee;
+  background-color: #3498db;
+}
+/* line 24, sass/partials/_buttons.scss */
+.default a {
+  color: #eeeeee;
+}
+/* line 27, sass/partials/_buttons.scss */
+.default:hover {
+  box-shadow: 0px -3px 0px 0px #1e8bc3 inset;
+  outline: 0 6px #1e8bc3;
+  background-color: #22A7F0;
+}
+/* line 32, sass/partials/_buttons.scss */
+.default:active {
+  background-color: #1e8bc3;
+  top: 0px;
+}
+
+
+
+
+

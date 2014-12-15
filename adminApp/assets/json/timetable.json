@@ -1,0 +1,22 @@
+{
+	"summer": {
+		"depart_arranmore": {
+			"weekday": "Monday to Friday",
+			"weekend": "Sunday"
+		},
+		"depart_burtonport": {
+			"weekday": "Monday to Friday",
+			"weekend": "Sunday"
+		}
+	},
+	"winter": {
+		"depart_arranmore": {
+			"weekday": "Monday to Friday",
+			"weekend": "Sunday"
+		},
+		"depart_burtonport":{
+			"weekday": "Monday to Friday",
+			"weekend": "Sunday"
+		}
+	}
+}

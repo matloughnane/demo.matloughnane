@@ -1,0 +1,339 @@
+@-webkit-viewport {
+  width: device-width;
+}
+
+@-moz-viewport {
+  width: device-width;
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+@-o-viewport {
+  width: device-width;
+}
+
+@viewport {
+  width: device-width;
+}
+
+/*
+==================  FONTS  ====================
+*/
+@font-face {
+  font-family: 'Rambla';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Rambla"), local("Rambla-Regular"), url(../fonts/rambla/Rambla-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'Rambla';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Rambla Bold"), local("Rambla-Bold"), url(../fonts/rambla/Rambla-Bold.ttf) format("truetype");
+}
+
+/*
+==================  END FONTS  ====================
+*/
+/* line 30, sass/partials/_base.scss */
+* {
+  font-family: 'Rambla', sans-serif;
+}
+
+/* line 35, sass/partials/_base.scss */
+body {
+  font-family: 'Rambla', sans-serif;
+  background-color: #dadfe1;
+  margin: 0px;
+}
+
+/* line 41, sass/partials/_base.scss */
+a {
+  text-decoration: none;
+  color: #eeeeee;
+}
+
+/* line 46, sass/partials/_base.scss */
+h4 {
+  margin: 0px;
+}
+
+/* line 50, sass/partials/_base.scss */
+::selection {
+  background: #6bb9f0;
+}
+
+/* line 54, sass/partials/_base.scss */
+::-moz-selection {
+  background: #6bb9f0;
+}
+
+/* line 58, sass/partials/_base.scss */
+.content {
+  background-color: #eeeeee;
+  box-shadow: 0px 2px 2px rgba(43, 48, 51, 0.3);
+}
+
+/* line 63, sass/partials/_base.scss */
+.content_main {
+  background-color: #3498db;
+  color: #eeeeee;
+  box-shadow: 0px 2px 2px rgba(43, 48, 51, 0.3);
+}
+
+/* line 69, sass/partials/_base.scss */
+.content_opposite {
+  background-color: #f27935;
+  color: #eeeeee;
+  box-shadow: 0px 2px 2px rgba(43, 48, 51, 0.3);
+}
+
+/* line 75, sass/partials/_base.scss */
+.nextFerryStyle {
+  text-align: center;
+}
+/* line 77, sass/partials/_base.scss */
+.nextFerryStyle h3 {
+  font-size: 30px;
+  margin: 0px;
+}
+/* line 81, sass/partials/_base.scss */
+.nextFerryStyle h4 {
+  margin: 0px;
+}
+
+/* line 1, sass/partials/_buttons.scss */
+.btn {
+  border: none;
+  background: none;
+  padding: 10px 10px;
+  display: inline-block;
+  margin: 5px 5px;
+  text-transform: lowercase;
+  text-decoration: none;
+  outline: none;
+  position: relative;
+  border-radius: 0px;
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  transition: all 0.1s;
+}
+/* line 15, sass/partials/_buttons.scss */
+.btn i {
+  margin-right: 20px;
+}
+
+/* line 20, sass/partials/_buttons.scss */
+.default {
+  color: #eeeeee;
+  background-color: #3498db;
+}
+/* line 23, sass/partials/_buttons.scss */
+.default a {
+  color: #eeeeee;
+}
+/* line 26, sass/partials/_buttons.scss */
+.default:hover {
+  box-shadow: 0px -3px 0px 0px #22a7f0 inset;
+  outline: 0 6px #1e8bc3;
+  background-color: #3498db;
+}
+/* line 31, sass/partials/_buttons.scss */
+.default:active {
+  background-color: #1e8bc3;
+  top: 0px;
+}
+
+/* line 37, sass/partials/_buttons.scss */
+.dark_highlight {
+  color: #eeeeee;
+  background-color: #22a7f0;
+}
+/* line 40, sass/partials/_buttons.scss */
+.dark_highlight a {
+  color: #eeeeee;
+}
+/* line 43, sass/partials/_buttons.scss */
+.dark_highlight:hover {
+  box-shadow: 0px -3px 0px 0px #1e8bc3 inset;
+  outline: 0 6px #1e8bc3;
+  background-color: #22a7f0;
+}
+/* line 48, sass/partials/_buttons.scss */
+.dark_highlight:active {
+  background-color: #1e8bc3;
+  top: 0px;
+}
+
+/* line 57, sass/partials/_buttons.scss */
+.facebook {
+  color: #eeeeee;
+  background-color: #3b5998;
+  box-shadow: 0px -3px 0px 0px #758ab6 inset;
+}
+/* line 61, sass/partials/_buttons.scss */
+.facebook a {
+  color: #eeeeee;
+}
+/* line 64, sass/partials/_buttons.scss */
+.facebook:hover {
+  outline: 0 6px #1e8bc3;
+  background-color: #758ab6;
+}
+/* line 68, sass/partials/_buttons.scss */
+.facebook:active {
+  background-color: #3b5998;
+  top: 0px;
+}
+
+/* line 74, sass/partials/_buttons.scss */
+.twitter {
+  color: #eeeeee;
+  background-color: #00aced;
+  box-shadow: 0px -3px 0px 0px #8bdfff inset;
+}
+/* line 78, sass/partials/_buttons.scss */
+.twitter a {
+  color: #eeeeee;
+}
+/* line 81, sass/partials/_buttons.scss */
+.twitter:hover {
+  outline: 0 6px #1e8bc3;
+  background-color: #8bdfff;
+}
+/* line 85, sass/partials/_buttons.scss */
+.twitter:active {
+  background-color: #00aced;
+  top: 0px;
+}
+
+/* line 91, sass/partials/_buttons.scss */
+.google {
+  color: #eeeeee;
+  background-color: #dd4b39;
+  box-shadow: 0px -3px 0px 0px #e78174 inset;
+}
+/* line 95, sass/partials/_buttons.scss */
+.google a {
+  color: #eeeeee;
+}
+/* line 98, sass/partials/_buttons.scss */
+.google:hover {
+  outline: 0 6px #1e8bc3;
+  background-color: #e78174;
+}
+/* line 103, sass/partials/_buttons.scss */
+.google:active {
+  background-color: #dd4b39;
+  top: 0px;
+}
+
+/* line 109, sass/partials/_buttons.scss */
+.instagram {
+  color: #eeeeee;
+  background-color: #517fa4;
+  box-shadow: 0px -3px 0px 0px #759cbb inset;
+}
+/* line 113, sass/partials/_buttons.scss */
+.instagram a {
+  color: #eeeeee;
+}
+/* line 116, sass/partials/_buttons.scss */
+.instagram:hover {
+  outline: 0 6px #1e8bc3;
+  background-color: #759cbb;
+}
+/* line 120, sass/partials/_buttons.scss */
+.instagram:active {
+  background-color: #517fa4;
+  top: 0px;
+}
+
+/* line 128, sass/partials/_buttons.scss */
+.right {
+  float: right;
+  clear: both;
+}
+
+/* line 133, sass/partials/_buttons.scss */
+.left {
+  float: left;
+}
+
+/* line 137, sass/partials/_buttons.scss */
+.bottom {
+  position: absolute;
+  bottom: 0px;
+}
+
+/* line 2, sass/partials/_tables.scss */
+table, th, td {
+  border-collapse: collapse;
+  text-align: center;
+}
+
+/* line 8, sass/partials/_tables.scss */
+table.main_color {
+  margin-top: 10px;
+  width: 100%;
+  color: #eeeeee;
+  background-color: #1e8bc3;
+  border: 1px solid #6bb9f0;
+}
+
+/* line 16, sass/partials/_tables.scss */
+th.main_color {
+  border: 1px solid #6bb9f0;
+  padding: 10px 0;
+  font-size: 1.3em;
+  height: 30px;
+}
+
+/* line 23, sass/partials/_tables.scss */
+td.main_color {
+  border: 1px solid #6bb9f0;
+  text-align: center;
+  padding: 5px 0;
+}
+/* line 27, sass/partials/_tables.scss */
+td.main_color.light_darkText {
+  padding: 5px 0;
+  font-weight: bold;
+  color: #1e8bc3;
+  background-color: #eeeeee;
+}
+
+/* line 36, sass/partials/_tables.scss */
+table.opp_color {
+  margin-top: 10px;
+  width: 100%;
+  padding: 5px 0;
+  color: #eeeeee;
+  background-color: #d36f18;
+  border: 1px solid #eeeeee;
+}
+
+/* line 45, sass/partials/_tables.scss */
+th.opp_color {
+  border: 1px solid #eeeeee;
+  padding: 10px 0;
+  font-size: 1.3em;
+  height: 30px;
+}
+
+/* line 52, sass/partials/_tables.scss */
+td.opp_color {
+  border: 1px solid #eeeeee;
+  text-align: center;
+  padding: 5px 0;
+}
+/* line 56, sass/partials/_tables.scss */
+td.opp_color.light_darkText {
+  padding: 5px 0;
+  font-weight: bold;
+  color: #d36f18;
+  background-color: #eeeeee;
+}

@@ -1,0 +1,87 @@
+
+@-webkit-viewport { width: device-width; }
+@-moz-viewport { width: device-width; }
+@-ms-viewport { width: device-width; }
+@-o-viewport { width: device-width; }
+@viewport { width: device-width; }
+
+/*
+==================  FONTS  ====================
+*/
+
+
+@font-face {
+  font-family: 'Rambla';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Rambla'), local('Rambla-Regular'),  url(../fonts/rambla/Rambla-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Rambla';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Rambla Bold'), local('Rambla-Bold'),  url(../fonts/rambla/Rambla-Bold.ttf) format('truetype');
+}
+
+/*
+==================  END FONTS  ====================
+*/
+
+* {
+	font-family: 'Rambla', sans-serif;
+}
+
+// BASIC FORMATTING
+body {
+	font-family: 'Rambla', sans-serif;
+	background-color: $bkg_color;
+	margin: 0px;
+}
+
+a {
+	text-decoration: none;
+	color: $bkg_color_lighter;
+}
+
+h4 {
+	margin: 0px;
+}
+
+::selection {
+	background:$main_color_light;
+}
+
+::-moz-selection {
+	background: $main_color_light;
+}
+
+.content {
+	background-color: $bkg_color_lighter;
+	box-shadow: $shadow;
+}
+
+.content_main {
+	background-color: $main_color;
+  	color: $bkg_color_lighter;
+	box-shadow: $shadow;
+}
+
+.content_opposite {
+	background-color: $main_color_opp;
+	color: $bkg_color_lighter;
+	box-shadow: $shadow;
+}
+
+.nextFerryStyle {
+	text-align: center;
+	h3 {
+		font-size: 30px;
+		margin: 0px;
+	}
+	h4 {
+		margin: 0px;
+	}
+}
+
+
+
