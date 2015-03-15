@@ -1,0 +1,433 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,600,700);
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+  font-family: 'codropsicons';
+  src: url("../fonts/codropsicons/codropsicons.eot");
+  src: url("../fonts/codropsicons/codropsicons.eot?#iefix") format("embedded-opentype"), url("../fonts/codropsicons/codropsicons.woff") format("woff"), url("../fonts/codropsicons/codropsicons.ttf") format("truetype"), url("../fonts/codropsicons/codropsicons.svg#codropsicons") format("svg");
+}
+
+/* line 14, _demo.scss */
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 15, _demo.scss */
+.clearfix:before, .clearfix:after {
+  content: '';
+  display: table;
+}
+
+/* line 16, _demo.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 18, _demo.scss */
+body {
+  color: #34495e;
+  background: #ecf0f1;
+  font-weight: 400;
+  font-size: 1em;
+  font-family: 'Raleway', Arial, sans-serif;
+}
+
+/* line 26, _demo.scss */
+h2, h3, h4, h5 {
+  color: #c0392b;
+}
+
+/* line 30, _demo.scss */
+a {
+  color: #e74c3c;
+  text-decoration: none;
+}
+
+/* line 36, _demo.scss */
+a:hover,
+a:focus {
+  color: #c0392b;
+  outline: none;
+}
+
+/* line 41, _demo.scss */
+.content {
+  min-height: 250px;
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
+
+/* line 47, _demo.scss */
+.container {
+  text-align: center;
+}
+
+/* line 52, _demo.scss */
+.result {
+  font-family: sans-serif;
+  font-size: 2em;
+  background: #fff;
+  display: inline-block;
+  margin: 0.25em 1em 0.25em 1em;
+  max-width: 400px;
+  width: calc(100% - 2em);
+  padding: 0.8em;
+  border-radius: 2px;
+  border: 4px solid #c0392b;
+}
+
+/* line 65, _demo.scss */
+.settingsBtn {
+  border-radius: 5px;
+  background: #c0392b;
+  color: #fff;
+  margin-top: 1em;
+  padding: 1em;
+}
+/* line 71, _demo.scss */
+.settingsBtn:hover {
+  background: #e74c3c;
+  color: #fff;
+}
+
+/* line 79, _demo.scss */
+.input {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  margin: 1.1em 1em 0.25em 1em;
+  max-width: 400px;
+  width: calc(100% - 2em);
+  vertical-align: top;
+}
+
+/* line 89, _demo.scss */
+.input__field {
+  position: relative;
+  display: block;
+  float: right;
+  padding: 0.8em;
+  width: 60%;
+  border: none;
+  border-radius: 0;
+  background: #f0f0f0;
+  color: #aaa;
+  font-weight: bold;
+  -webkit-appearance: none;
+  /* for box shadows to show on iOS */
+}
+
+/* line 104, _demo.scss */
+.input__field:focus {
+  outline: none;
+}
+
+/* line 108, _demo.scss */
+.input__label {
+  display: inline-block;
+  float: right;
+  padding: 0 1em;
+  width: 40%;
+  color: #ecf0f1;
+  font-weight: bold;
+  font-size: 70.25%;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 125, _demo.scss */
+.input__label-content {
+  position: relative;
+  display: block;
+  padding: 1.6em 0;
+  width: 100%;
+}
+
+/* line 132, _demo.scss */
+.graphic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: none;
+}
+
+/* line 139, _demo.scss */
+.icon {
+  color: #ddd;
+  font-size: 150%;
+}
+
+/* Ichiro */
+/* line 145, _demo.scss */
+.input--ichiro {
+  font-size: 1.5em;
+}
+
+/* line 150, _demo.scss */
+.input__field--ichiro {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  z-index: 100;
+  display: block;
+  padding: 0 0.55em;
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
+  background: #fff;
+  color: #c0392b;
+  font-size: 1.2em;
+  opacity: 0;
+  -webkit-transform: scale3d(1, 0, 1);
+  transform: scale3d(1, 0, 1);
+  -webkit-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+/* line 171, _demo.scss */
+.input__label--ichiro {
+  width: 100%;
+  text-align: left;
+  cursor: text;
+}
+
+/* line 177, _demo.scss */
+.input__label--ichiro::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #e74c3c;
+  -webkit-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+}
+
+/* line 192, _demo.scss */
+.input__label-content--ichiro {
+  -webkit-transform-origin: 0% 50%;
+  transform-origin: 0% 50%;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+}
+
+/* line 200, _demo.scss */
+.input__field--ichiro:focus,
+.input--filled .input__field--ichiro {
+  opacity: 1;
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+}
+
+/* line 207, _demo.scss */
+.input__field--ichiro:focus + .input__label--ichiro,
+.input--filled .input__label--ichiro {
+  cursor: default;
+  pointer-events: none;
+}
+
+/* line 213, _demo.scss */
+.input__field--ichiro:focus + .input__label--ichiro::before,
+.input--filled .input__label--ichiro::before {
+  -webkit-transform: scale3d(1, 1.5, 1);
+  transform: scale3d(1, 1.5, 1);
+}
+
+/* line 219, _demo.scss */
+.input__field--ichiro:focus + .input__label--ichiro .input__label-content--ichiro,
+.input--filled .input__label-content--ichiro {
+  -webkit-transform: translate3d(0, -3.15em, 0) scale3d(0.8, 0.8, 1);
+  transform: translate3d(0, -3.15em, 0) scale3d(0.8, 0.8, 1) translateZ(1px);
+}
+
+/* line 1, _pullupmenu.scss */
+.menu {
+  position: fixed;
+  max-width: 560px;
+  width: 90%;
+  height: 360px;
+  bottom: 0;
+  left: 50%;
+  z-index: 100;
+  pointer-events: none;
+  -webkit-transform: translate3d(-50%, 240px, 0);
+  transform: translate3d(-50%, 240px, 0);
+  -webkit-transition: -webkit-transform 0.6s;
+  transition: transform 0.6s;
+}
+
+/* line 16, _pullupmenu.scss */
+.menu.menu--open {
+  pointer-events: auto;
+  -webkit-transform: translate3d(-50%, 0, 0);
+  transform: translate3d(-50%, 0, 0);
+}
+
+/* line 22, _pullupmenu.scss */
+.main {
+  -webkit-transition: opacity 0.6s;
+  transition: opacity 0.6s;
+}
+
+/* line 27, _pullupmenu.scss */
+.menu.menu--open + .main {
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+/* line 32, _pullupmenu.scss */
+.menu__inner {
+  padding: 120px 2em 0;
+  height: 100%;
+  position: relative;
+  z-index: 100;
+}
+
+/* line 39, _pullupmenu.scss */
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 45, _pullupmenu.scss */
+.menu ul li {
+  margin: 0;
+  -webkit-transform: translate3d(0, 150px, 0);
+  transform: translate3d(0, 150px, 0);
+  -webkit-transition: -webkit-transform 0.7s;
+  transition: transform 0.7s;
+}
+
+/* line 53, _pullupmenu.scss */
+.menu.menu--anim ul li {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* line 58, _pullupmenu.scss */
+.menu.menu--anim ul li:last-child {
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+
+/* line 63, _pullupmenu.scss */
+.menu.menu--anim ul li:nth-child(3) {
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+/* line 68, _pullupmenu.scss */
+.menu.menu--anim ul li:nth-child(2) {
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+
+/* line 73, _pullupmenu.scss */
+.menu ul li a {
+  display: block;
+  outline: none;
+  font-size: 1.15em;
+  font-weight: bold;
+  padding: 0.85em;
+}
+
+/* line 81, _pullupmenu.scss */
+.menu__handle {
+  background: transparent;
+  border: none;
+  width: 30px;
+  height: 18px;
+  padding: 0;
+  outline: none;
+  position: absolute;
+  top: 66px;
+  left: 50%;
+  margin-left: -15px;
+  z-index: 2000;
+  pointer-events: auto;
+}
+
+/* line 97, _pullupmenu.scss */
+.menu__handle::before,
+.menu__handle::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background: #5f656f;
+  left: 50%;
+  top: 0;
+  margin-left: -1px;
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transition: -webkit-transform 0.25s;
+  transition: transform 0.25s;
+}
+
+/* line 112, _pullupmenu.scss */
+.menu__handle span {
+  display: none;
+}
+
+/* line 116, _pullupmenu.scss */
+.menu__handle::before {
+  -webkit-transform: rotate3d(0, 0, 1, 45deg);
+  transform: rotate3d(0, 0, 1, 45deg);
+}
+
+/* line 121, _pullupmenu.scss */
+.menu__handle::after {
+  -webkit-transform: rotate3d(0, 0, 1, -45deg);
+  transform: rotate3d(0, 0, 1, -45deg);
+}
+
+/* line 126, _pullupmenu.scss */
+.menu--open .menu__handle::before {
+  -webkit-transform: translate3d(0, 75%, 0) rotate3d(0, 0, 1, 135deg);
+  transform: translate3d(0, 75%, 0) rotate3d(0, 0, 1, 135deg);
+}
+
+/* line 131, _pullupmenu.scss */
+.menu--open .menu__handle::after {
+  -webkit-transform: translate3d(0, 75%, 0) rotate3d(0, 0, 1, -135deg);
+  transform: translate3d(0, 75%, 0) rotate3d(0, 0, 1, -135deg);
+}
+
+/* line 136, _pullupmenu.scss */
+.morph-shape {
+  position: absolute;
+  height: 200px;
+  width: 100%;
+  top: 0;
+  right: 0;
+}
+
+/* line 144, _pullupmenu.scss */
+.morph-shape svg path {
+  stroke: #5f656f;
+  stroke-width: 2px;
+}
+
+@media screen and (max-width: 63em) {
+  /* line 150, _pullupmenu.scss */
+  .menu {
+    background: #ecf0f1;
+    background: -webkit-linear-gradient(top, rgba(236, 240, 241, 0) 0%, #ecf0f1 20%);
+    background: linear-gradient(to bottom, rgba(236, 240, 241, 0) 0%, #ecf0f1 20%);
+  }
+
+  /* line 155, _pullupmenu.scss */
+  .menu.menu--open + .main {
+    opacity: 0.05;
+  }
+}

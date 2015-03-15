@@ -1,6 +1,8 @@
+var firebaseRef = new Firebase("https://amber-fire-55.firebaseio.com/");
+
 $(function() {
 
-    var firebaseRef = new Firebase("https://amber-fire-55.firebaseio.com/");
+    // var firebaseRef = new Firebase("https://amber-fire-55.firebaseio.com/");
 
     // A MESSAGES REFERENCE UNDER MAIN DB
     var rootRef = firebaseRef.child("adminApp1");
@@ -8,7 +10,9 @@ $(function() {
     // delete record when a tag is clicked
     jQuery('body').on('click', 'a', function() {
        var $rec = $(this).closest('[data-id]');
+       console.log($rec);
         var id = $rec.attr('data-id') || null;
+        console.log(id);
         if( id ) {
            // remove any nested children
            $rec.find('[data-id]').each(function() {
@@ -21,8 +25,9 @@ $(function() {
         return false;
     });
 
+    var button_class = '';
     // add new records at the appropriate level when a button is clicked
-    jQuery('body').on('click', 'button', function () {
+    jQuery('body').on('click', ".summer_DA", function () {
         var $input = $(this).prev('input');
         var title = $input.val();
         var parent = $input.closest('[data-id]').attr('data-id') || null;
@@ -32,7 +37,9 @@ $(function() {
         }
         $input.val('');
         return false;
-    })
+    });
+
+    jQuery('body').on('click', '.summer_DA', pushInput("summer_da_wk"));
 
     rootRef.on('child_added', function (snapshot) {
         var message = snapshot.val();
@@ -46,10 +53,24 @@ $(function() {
 
 });
 
+
+function pushInput(timetable) {
+
+    // var $input = $(this).prev('input');
+    // var title = $input.val();
+    // var parent = $input.closest('[data-id]').attr('data-id') || null;
+    // console.log('creating', parent, title);
+    // if (title) {
+    //     rootRef.push({ 'title': title, 'parent': parent });
+    // }
+    // $input.val('');
+    // return false;
+}
+
 function displayTitleMessage(id, title, parentId) {
     var $parent = parentId ? findParent(parentId) : $('#records');
     var $el = makeListItem(title);
-    console.log('displaying', id, parentId, $parent, title);
+    console.log('testing_displaying', id, parentId, $parent, title);
     // add a data-parent attribute, which we use to locate parent elements
     $el.appendTo($parent).attr('data-id', id);
 }
