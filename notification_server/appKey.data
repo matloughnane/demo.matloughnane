@@ -1,0 +1,8 @@
+
+>
+> db.pushassociations.find()
+{ "_id" : ObjectId("55e2fc679b9410e564224514"), "user" : "testDevice2", "type" : "android", "token" : "APA91bH6fvSh75aBZypvA4V0v2G9Y1JmvFMvQUSSZtlW6K6GmA7j7ZM6vbxqxmFyEZRn0pt4lG395sI8cEAme5sOTquT4NdS-oFwiukiQJnXfQv3NgbgB3XDyE-_j4iZEmDU-tBWZUXY" }
+{ "_id" : ObjectId("55e312b49b9410e564224516"), "user" : "owenDevice", "type" : "android", "token" : "APA91bG-knmx_Eybvmj8b8DjRS1u0PqREDFgOXM5AaUwcP1U0V04JLBqj6hyGkc5Dpxo6XYZA1rftRpTV7oCG2EEcSxFPFm5impbtfqw2EXVeIlIlYOeCre_Dduf5SImeHHv_9HH0tjD" }
+>
+
+{ "user" : "owenDevice", "type" : "android", "token" : "APA91bG-knmx_Eybvmj8b8DjRS1u0PqREDFgOXM5AaUwcP1U0V04JLBqj6hyGkc5Dpxo6XYZA1rftRpTV7oCG2EEcSxFPFm5impbtfqw2EXVeIlIlYOeCre_Dduf5SImeHHv_9HH0tjD" }

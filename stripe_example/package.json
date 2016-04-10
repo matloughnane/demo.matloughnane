@@ -1,0 +1,19 @@
+{
+  "name": "stripe_example",
+  "version": "1.0.0",
+  "description": "simple stripe example",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "example"
+  ],
+  "author": "mat.loughnane",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.13.2",
+    "express": "^4.13.1",
+    "stripe": "^3.6.0"
+  }
+}

@@ -1,0 +1,30 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'uninstall',
+1 verbose cli   'node-pushserver',
+1 verbose cli   '-g' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.33
+4 verbose lib/node_modules/node-pushserver unbuild
+5 info preuninstall node-pushserver@0.5.4
+6 info uninstall node-pushserver@0.5.4
+7 verbose true,/usr/local/lib/node_modules,/usr/local/lib/node_modules unbuild node-pushserver@0.5.4
+8 verbose /usr/local/bin,[object Object] binRoot
+9 info postuninstall node-pushserver@0.5.4
+10 error Error: EACCES, unlink '/usr/local/lib/node_modules/node-pushserver/.npmignore'
+10 error  { [Error: EACCES, unlink '/usr/local/lib/node_modules/node-pushserver/.npmignore']
+10 error   errno: 3,
+10 error   code: 'EACCES',
+10 error   path: '/usr/local/lib/node_modules/node-pushserver/.npmignore' }
+11 error Please try running this command again as root/Administrator.
+12 error System Darwin 14.5.0
+13 error command "/usr/local/bin/node" "/usr/local/bin/npm" "uninstall" "node-pushserver" "-g"
+14 error cwd /Users/Matthew/developer/github/demo.matloughnane/pushNotif
+15 error node -v v0.10.33
+16 error npm -v 1.4.28
+17 error path /usr/local/lib/node_modules/node-pushserver/.npmignore
+18 error code EACCES
+19 error errno 3
+20 error stack Error: EACCES, unlink '/usr/local/lib/node_modules/node-pushserver/.npmignore'
+21 verbose exit [ 3, true ]

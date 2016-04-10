@@ -1,0 +1,14 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	margin: 0px;
+}
+
+.blue {
+	background-color: #59ABE3;
+	color: white;
+	height: 100%;
+}
+
+.orange {
+	background-color: #F4B350;
+}

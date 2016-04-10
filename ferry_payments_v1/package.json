@@ -1,0 +1,19 @@
+{
+  "name": "ferry_payments_v1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+
+  "license": "ISC",
+
+  "dependencies": {
+    "express": "~4.11.1",
+    "mongodb": "^1.4.34",
+    "mongoose": "3.8.24"
+  }
+
+}
